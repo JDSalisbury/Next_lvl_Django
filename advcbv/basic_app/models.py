@@ -14,7 +14,7 @@ class School(models.Model):
 class Student(models.Model):
     name = models.CharField(max_length=256)
     age = models.PositiveIntegerField()
-    school = models.ForeignKey(School,related_name='students', on_delete=models.SET_NULL)
+    school = models.ForeignKey(School,related_name='students', null=True, on_delete=models.SET_NULL)
 
     def __str__(self):
         return self.name
