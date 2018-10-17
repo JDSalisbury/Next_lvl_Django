@@ -15,9 +15,11 @@ from . import models
 #         return context
 
 class SchoolListView(ListView):
+    context_object_name = 'schools'
     model = models.School
 
 class SchoolDetailView(DetailView):
+    context_object_name = 'school_details'
     model = models.School
     template_name = 'basic_app/school_detail.html'
 
