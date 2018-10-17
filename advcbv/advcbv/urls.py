@@ -19,7 +19,7 @@ from basic_app import views
 from django.conf.urls import url, include
 
 urlpatterns = [
-    url(r'^$',views.CBView.as_view()),
+    url(r'^$',views.IndexView.as_view()),
     url(r'^admin/', admin.site.urls),
     # url(r'^basic_app/',include('basic_app.urls'))
 ]
